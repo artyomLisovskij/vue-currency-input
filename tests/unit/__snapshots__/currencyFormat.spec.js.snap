@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createCurrencyFormat custom precision 1`] = `
-Object {
+exports[`CurrencyFormat custom precision 1`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 0,
@@ -13,8 +13,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat custom precision 2`] = `
-Object {
+exports[`CurrencyFormat custom precision 2`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 0,
@@ -26,8 +26,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat custom precision 3`] = `
-Object {
+exports[`CurrencyFormat custom precision 3`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -39,8 +39,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat custom precision 4`] = `
-Object {
+exports[`CurrencyFormat custom precision 4`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -52,9 +52,9 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat custom precision 5`] = `
-Object {
-  "decimalSymbol": null,
+exports[`CurrencyFormat custom precision 5`] = `
+CurrencyFormat {
+  "decimalSymbol": undefined,
   "groupingSymbol": ",",
   "maximumFractionDigits": 0,
   "minimumFractionDigits": 0,
@@ -65,8 +65,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat custom prefix/suffix 1`] = `
-Object {
+exports[`CurrencyFormat custom prefix/suffix 1`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -78,8 +78,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat custom prefix/suffix 2`] = `
-Object {
+exports[`CurrencyFormat custom prefix/suffix 2`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -91,8 +91,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat custom prefix/suffix 3`] = `
-Object {
+exports[`CurrencyFormat custom prefix/suffix 3`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -104,8 +104,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n de-DE_EUR 1`] = `
-Object {
+exports[`CurrencyFormat i18n de-DE_EUR 1`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -117,8 +117,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n en-GB_GBP 1`] = `
-Object {
+exports[`CurrencyFormat i18n en-GB_GBP 1`] = `
+CurrencyFormat {
   "decimalSymbol": ".",
   "groupingSymbol": ",",
   "maximumFractionDigits": 2,
@@ -130,8 +130,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n en-IN_INR 1`] = `
-Object {
+exports[`CurrencyFormat i18n en-IN_INR 1`] = `
+CurrencyFormat {
   "decimalSymbol": ".",
   "groupingSymbol": ",",
   "maximumFractionDigits": 2,
@@ -143,8 +143,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n en-US_USD 1`] = `
-Object {
+exports[`CurrencyFormat i18n en-US_USD 1`] = `
+CurrencyFormat {
   "decimalSymbol": ".",
   "groupingSymbol": ",",
   "maximumFractionDigits": 2,
@@ -156,8 +156,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n es-ES_EUR 1`] = `
-Object {
+exports[`CurrencyFormat i18n es-ES_EUR 1`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -169,9 +169,9 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n ja_JPY 1`] = `
-Object {
-  "decimalSymbol": null,
+exports[`CurrencyFormat i18n ja_JPY 1`] = `
+CurrencyFormat {
+  "decimalSymbol": undefined,
   "groupingSymbol": ",",
   "maximumFractionDigits": 0,
   "minimumFractionDigits": 0,
@@ -182,8 +182,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n nl-NL_EUR 1`] = `
-Object {
+exports[`CurrencyFormat i18n nl-NL_EUR 1`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -195,8 +195,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n pt_BRL 1`] = `
-Object {
+exports[`CurrencyFormat i18n pt_BRL 1`] = `
+CurrencyFormat {
   "decimalSymbol": ",",
   "groupingSymbol": ".",
   "maximumFractionDigits": 2,
@@ -208,8 +208,8 @@ Object {
 }
 `;
 
-exports[`createCurrencyFormat i18n zh_CNY 1`] = `
-Object {
+exports[`CurrencyFormat i18n zh_CNY 1`] = `
+CurrencyFormat {
   "decimalSymbol": ".",
   "groupingSymbol": ",",
   "maximumFractionDigits": 2,

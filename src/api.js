@@ -1,5 +1,4 @@
 import CurrencyFormat from './currencyFormat'
-import dispatchEvent from './utils/dispatchEvent'
 
 export const DEFAULT_OPTIONS = {
   locale: undefined,
@@ -31,4 +30,4 @@ export const parseCurrency = (formattedValue, options) => {
  * @param {HTMLInputElement} el An input element using on the `v-currency` directive.
  * @param {Number} value The number to be set.
  */
-export const setValue = (el, value) => dispatchEvent(el, 'format', { value })
+export const setValue = (el, value) => el.$ci.setValue(value)

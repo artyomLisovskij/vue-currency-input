@@ -79,8 +79,7 @@ describe('component options', () => {
   })
 
   it('should emit a change event if the valueAsInteger option is toggled', async () => {
-    const wrapper = mountComponent({ locale: 'en', currency: 'USD', valueAsInteger: true })
-    wrapper.setValue(1234)
+    const wrapper = mountComponent({ locale: 'en', currency: 'USD', valueAsInteger: true, value: 1234 })
 
     wrapper.setProps({ valueAsInteger: false })
     await wrapper.vm.$nextTick()

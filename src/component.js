@@ -1,35 +1,13 @@
-import { DEFAULT_OPTIONS, setValue } from './api'
-import currencyDirective from './directive'
+import { DEFAULT_OPTIONS } from './api'
+import { CurrencyInput } from './currencyInput'
 
 export default {
   render (h) {
     return h('input', {
       domProps: {
         value: this.formattedValue
-      },
-      directives: [{
-        name: 'currency',
-        value: this.options
-      }],
-      on: {
-        ...this.$listeners,
-        change: e => {
-          if (e.detail) {
-            this.$emit('change', e.detail.numberValue)
-          }
-          this.formattedValue = this.$el.value
-        },
-        input: e => {
-          if (e.detail && this.value !== e.detail.numberValue) {
-            this.$emit('input', e.detail.numberValue)
-          }
-          this.formattedValue = this.$el.value
-        }
       }
     })
-  },
-  directives: {
-    currency: currencyDirective
   },
   name: 'CurrencyInput',
   props: {
@@ -72,6 +50,7 @@ export default {
   },
   data () {
     return {
+      ci: null,
       formattedValue: this.value
     }
   },
@@ -87,11 +66,28 @@ export default {
     }
   },
   watch: {
-    value: 'setValue'
+    value: 'setValue',
+    options (newOptions, oldOptions) {
+      this.ci.updateOptions(newOptions, oldOptions)
+    }
+  },
+  mounted () {
+    this.ci = new CurrencyInput(this.$el, this.options, {
+      onChange: ({ formattedValue, numberValue }) => {
+        this.$emit('change', numberValue)
+        this.formattedValue = formattedValue
+      },
+      onInput: ({ formattedValue, numberValue }) => {
+        if (this.value !== numberValue) {
+          this.$emit('input', numberValue)
+        }
+        this.formattedValue = formattedValue
+      }
+    })
   },
   methods: {
     setValue (value) {
-      setValue(this.$el, value)
+      this.ci.setValue(value)
     }
   }
 }

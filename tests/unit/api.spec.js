@@ -1,6 +1,5 @@
 import { DEFAULT_OPTIONS, parseCurrency, setValue } from '../../src/api'
 import CurrencyFormat from '../../src/currencyFormat'
-import dispatchEvent from '../../src/utils/dispatchEvent'
 
 jest.mock('../../src/currencyFormat')
 jest.mock('../../src/utils/dispatchEvent')
@@ -19,11 +18,11 @@ describe('parseCurrency', () => {
 })
 
 describe('setValue', () => {
-  it('dispatches a format event on the given input', () => {
-    const el = document.createElement('input')
+  it('should call the setValue method on the CurrencyInput instance of the input element', () => {
+    const el = { $ci: { setValue: jest.fn() } }
 
     setValue(el, 1234)
 
-    expect(dispatchEvent).toHaveBeenCalledWith(el, 'format', { value: 1234 })
+    expect(el.$ci.setValue).toHaveBeenCalledWith(1234)
   })
 })

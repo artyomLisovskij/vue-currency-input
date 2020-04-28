@@ -11,7 +11,7 @@
   "files": [
     "dist/*.js",
     "src",
-    "nuxt"
+    "rollup.config.js"
   ],
   "sideeffects": false,
   "author": "Matthias Stiller",
